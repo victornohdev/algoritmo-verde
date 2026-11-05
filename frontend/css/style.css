@@ -1,1 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.navbar {
+    background-color: #1b5e20;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo h2 {
+    font-size: 1.2rem;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.badge {
+    background-color: #2e7d32;
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.contenedor {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.banner-bienvenida {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.subtitulo {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #2e7d32;
+    letter-spacing: 1px;
+}
+
+.banner-bienvenida h1 {
+    font-size: 2rem;
+    color: #1b5e20;
+    margin: 0.2rem 0;
+}
+
+.banner-bienvenida h2 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.banner-bienvenida p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.botones {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-verde {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-transparente {
+    background-color: transparent;
+    border: 2px solid #2e7d32;
+    color: #2e7d32;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-verde:hover {
+    background-color: #1b5e20;
+}
+
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card-stat {
+    background: white;
+    padding: 1.2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-stat .icono {
+    font-size: 1.8rem;
+    background: #e8f5e9;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.card-stat h3 {
+    font-size: 1.2rem;
+    color: #1b5e20;
+}
+
+.card-stat p {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.seccion-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.caja-seccion {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.caja-seccion h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #1b5e20;
+}
+
+.mapa-placeholder {
+    background-color: #e0e0e0;
+    height: 120px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.lista-puntos {
+    list-style: none;
+}
+
+.lista-puntos li {
+    padding: 0.6rem 0;
+    border-bottom: 1.5px solid #f0f0f0;
+    font-size: 0.85rem;
+}
+
+.abierto {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.puntos-ganancia {
+    float: right;
+    color: #e65100;
+    font-weight: bold;
+}
+
+
+.grid-premios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.card-premio {
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-premio span {
+    font-size: 1.5rem;
+}
+
+.card-premio h4 {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.card-premio p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.8rem;
+}
+
+.btn-canjear {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
