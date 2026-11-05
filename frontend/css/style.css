@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: #f4f7f6;
     color: #333;
 }
@@ -16,249 +16,228 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 15px 30px;
 }
 
 .logo h2 {
-    font-size: 1.2rem;
+    font-size: 22px;
 }
 
 .menu {
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 20px;
 }
 
 .menu a {
     color: white;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 14px;
 }
 
 .menu a:hover {
     text-decoration: underline;
 }
 
-.usuario {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-}
-
 .badge {
     background-color: #2e7d32;
-    padding: 0.3rem 0.6rem;
+    padding: 6px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
     font-weight: bold;
+    font-size: 13px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 180px;
+    list-style: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    color: #333;
+    padding: 10px 15px;
+}
+
+.submenu li a:hover {
+    background-color: #e8f5e9;
+    color: #2e7d32;
 }
 
 .contenedor {
+    width: 90%;
     max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    margin: 30px auto;
 }
 
-.banner-bienvenida {
+.banner {
     background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    padding: 2.5rem;
+    padding: 40px;
     border-radius: 12px;
-    margin-bottom: 2rem;
+    margin-bottom: 25px;
 }
 
 .subtitulo {
-    font-size: 0.75rem;
-    font-weight: bold;
     color: #2e7d32;
+    font-size: 12px;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
-.banner-bienvenida h1 {
-    font-size: 2rem;
+.banner h1 {
     color: #1b5e20;
-    margin: 0.2rem 0;
+    font-size: 32px;
+    margin: 10px 0;
 }
 
-.banner-bienvenida h2 {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 0.8rem;
+.banner h2 {
+    font-size: 19px;
+    margin-bottom: 12px;
 }
 
-.banner-bienvenida p {
-    font-size: 0.9rem;
+.banner p {
     color: #555;
-    margin-bottom: 1.5rem;
+    font-size: 14px;
     max-width: 600px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .botones {
     display: flex;
-    gap: 1rem;
+    gap: 12px;
 }
 
 .btn-verde {
     background-color: #2e7d32;
     color: white;
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .btn-transparente {
     background-color: transparent;
-    border: 2px solid #2e7d32;
     color: #2e7d32;
-    padding: 0.6rem 1.2rem;
+    border: 2px solid #2e7d32;
+    padding: 10px 20px;
     border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
 }
 
 .btn-verde:hover {
     background-color: #1b5e20;
 }
 
+.btn-transparente:hover {
+    background-color: #e8f5e9;
+}
+
 .estadisticas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
-.card-stat {
-    background: white;
-    padding: 1.2rem;
+.card {
+    background-color: white;
+    padding: 20px;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.card-stat .icono {
-    font-size: 1.8rem;
-    background: #e8f5e9;
-    padding: 0.5rem;
-    border-radius: 8px;
-}
-
-.card-stat h3 {
-    font-size: 1.2rem;
+.card h3 {
     color: #1b5e20;
+    font-size: 22px;
+    margin-bottom: 8px;
 }
 
-.card-stat p {
-    font-size: 0.8rem;
+.card p {
     color: #666;
+    font-size: 14px;
 }
 
-.seccion-columnas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
-.caja-seccion {
-    background: white;
-    padding: 1.5rem;
+.seccion {
+    background-color: white;
+    padding: 25px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.caja-seccion h3 {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+.seccion h3 {
     color: #1b5e20;
+    margin-bottom: 20px;
 }
 
-.mapa-placeholder {
-    background-color: #e0e0e0;
-    height: 120px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-}
-
-.lista-puntos {
-    list-style: none;
-}
-
-.lista-puntos li {
-    padding: 0.6rem 0;
-    border-bottom: 1.5px solid #f0f0f0;
-    font-size: 0.85rem;
-}
-
-.abierto {
-    color: #2e7d32;
-    font-weight: bold;
-}
-
-.puntos-ganancia {
-    float: right;
-    color: #e65100;
-    font-weight: bold;
-}
-
-
-.grid-premios {
+.premios {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
 }
 
-.card-premio {
-    border: 1px solid #e0e0e0;
-    padding: 1rem;
+.premio {
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 20px;
     text-align: center;
 }
 
-.card-premio span {
-    font-size: 1.5rem;
+.premio h4 {
+    margin-bottom: 10px;
 }
 
-.card-premio h4 {
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
-}
-
-.card-premio p {
-    font-size: 0.8rem;
+.premio p {
     color: #666;
-    margin-bottom: 0.8rem;
+    margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .btn-canjear {
     background-color: #2e7d32;
     color: white;
     border: none;
-    padding: 0.4rem 1rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
+    padding: 8px 18px;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+.btn-canjear:hover {
+    background-color: #1b5e20;
 }
 
 .footer {
     background-color: #1b5e20;
     color: white;
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
-    font-size: 0.85rem;
+    padding: 25px;
+    margin-top: 35px;
+    font-size: 14px;
 }
 
 .footer-links {
-    margin-top: 0.8rem;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 20px;
+    margin-top: 12px;
 }
 
 .footer-links a {
