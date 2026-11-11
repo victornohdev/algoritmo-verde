@@ -1,0 +1,306 @@
+
+.pagina-auth {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.auth {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px; 
+}
+
+.auth__contenedor-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr; /* 2 columnas pegadas */
+  width: 100%;
+  max-width: 1140px;
+  background: var(--blanco, #ffffff);
+  border-radius: var(--radio-lg, 16px);
+  border: 1px solid var(--borde, #e2e8f0);
+  box-shadow: var(--sombra-lg, 0 10px 25px -5px rgba(0, 0, 0, 0.08));
+  overflow: hidden; /* Corta los bordes del panel lateral verde */
+}
+
+/* ---------- Panel lateral decorativo (Izquierda) ---------- */
+.auth__lateral {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 40px;
+  background: var(--verde-900);
+  border-right: 1px solid var(--borde, #e2e8f0);
+}
+
+.auth__lateral-contenido { 
+  max-width: 440px; 
+  width: 100%;
+}
+
+.auth__lateral h2 {
+  font-size: clamp(1.35rem, 1.8vw, 1.7rem);
+  color: white;
+  margin: 8px 0 6px;
+  line-height: 1.25;
+}
+
+.auth__lateral p { 
+  color: white; 
+  font-size: .9rem; 
+}
+
+.auth__ilustracion {
+  width: 100%;
+  max-width: 310px; 
+  height: auto;
+  margin: 10px auto;
+  display: block;
+}
+
+.auth__beneficios { 
+  display: grid; 
+  gap: 8px; 
+  margin-top: 12px;
+}
+
+.auth__beneficios li { 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  font-size: .88rem; 
+  font-weight: 500; 
+  color: white; 
+}
+
+.auth__beneficios i { 
+  color: var(--verde-600, #16a34a); 
+}
+
+/* ---------- Panel del formulario (Derecha) ---------- */
+.auth__panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 48px; 
+  background: var(--blanco, #ffffff);
+}
+
+.auth__tarjeta { 
+  width: 100%; 
+}
+
+.auth__titulo { 
+  font-size: 1.55rem; 
+  color: var(--verde-950, #052e16);
+}
+
+.auth__subtitulo { 
+  color: var(--texto-suave, #475569); 
+  font-size: .88rem; 
+  margin: 2px 0 16px; 
+}
+
+.auth__form { 
+  display: grid; 
+  gap: 10px; /* Reducción de espacio entre campos */
+}
+
+/* ---------- Campos e Inputs ---------- */
+.campo { 
+  display: grid; 
+  gap: 4px; 
+  align-content: start; 
+}
+
+.campo label { 
+  font-size: .82rem; 
+  font-weight: 600; 
+  color: var(--texto, #1e293b);
+}
+
+.campo__opcional { 
+  font-weight: 400; 
+  color: var(--texto-suave, #475569); 
+}
+
+.campos-fila { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 12px; 
+}
+
+.campo__control { 
+  position: relative; 
+}
+
+.campo__control > i {
+  position: absolute;
+  left: 14px; 
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--texto-suave, #475569);
+  font-size: .85rem;
+  pointer-events: none;
+  transition: color var(--transicion, 0.2s);
+}
+
+.campo__control input,
+.campo__control select,
+.campo__control textarea {
+  width: 100%;
+  padding: 8px 12px 8px 38px; /* Inputs ligeramente más delgados */
+  font: inherit;
+  font-size: .88rem;
+  color: var(--texto, #1e293b);
+  background: var(--blanco, #ffffff);
+  border: 1.5px solid var(--borde, #cbd5e1);
+  border-radius: 8px;
+  transition: border-color var(--transicion, 0.2s), box-shadow var(--transicion, 0.2s);
+}
+
+.campo__control select { 
+  appearance: none; 
+  cursor: pointer; 
+  padding-right: 34px; 
+}
+
+.campo__control--select::after {
+  content: "";
+  position: absolute;
+  right: 14px; 
+  top: 50%;
+  width: 6px; 
+  height: 6px;
+  border-right: 2px solid var(--texto-suave, #475569);
+  border-bottom: 2px solid var(--texto-suave, #475569);
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+.campo__control textarea { 
+  padding-left: 12px; 
+  resize: vertical; 
+  min-height: 58px; /* Textarea menos alta */
+  line-height: 1.4; 
+}
+
+.campo__control ::placeholder { 
+  color: #9aa8a0; 
+}
+
+.campo__control select:invalid { 
+  color: #9aa8a0; 
+}
+
+.campo__control select option { 
+  color: var(--texto, #1e293b); 
+}
+
+.campo__control input:hover, 
+.campo__control select:hover, 
+.campo__control textarea:hover { 
+  border-color: var(--verde-200, #a7f3d0); 
+}
+
+.campo__control input:focus, 
+.campo__control select:focus, 
+.campo__control textarea:focus {
+  outline: none;
+  border-color: var(--verde-500, #22c55e);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, .18);
+}
+
+.campo__control:focus-within > i { 
+  color: var(--verde-600, #16a34a); 
+}
+
+/* ---------- Checkbox y Botones ---------- */
+.auth__check { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  cursor: pointer; 
+  color: var(--texto-suave, #475569); 
+  font-size: .84rem; 
+  margin-top: 2px;
+}
+
+.auth__check input { 
+  width: 15px; 
+  height: 15px; 
+  flex: none; 
+  accent-color: var(--verde-600, #16a34a); 
+}
+
+.auth__enlace { 
+  color: var(--verde-700, #15803d); 
+  font-weight: 600; 
+}
+
+.auth__enlace:hover { 
+  color: var(--verde-500, #22c55e); 
+  text-decoration: underline; 
+}
+
+.auth__enviar { 
+  width: 100%; 
+  margin-top: 4px; 
+  padding-block: 10px; /* Botón estilizado sin altura excesiva */
+}
+
+.auth__registro { 
+  margin-top: 12px; 
+  text-align: center; 
+  font-size: .86rem; 
+  color: var(--texto-suave, #475569); 
+}
+
+/* ---------- Pie de página ---------- */
+.auth__pie {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 12px 32px;
+  font-size: .8rem;
+  color: var(--texto-suave, #475569);
+  background: var(--blanco, #ffffff);
+  border-top: 1px solid var(--borde, #e2e8f0);
+}
+
+.auth__pie a { 
+  color: var(--verde-700, #15803d); 
+  font-weight: 600; 
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+  .auth__contenedor-card { 
+    grid-template-columns: 1fr; 
+    max-width: 520px;
+  }
+  
+  .auth__lateral {
+    padding: 24px 20px;
+    border-right: none;
+    border-bottom: 1px solid var(--borde, #e2e8f0);
+  }
+
+  .auth__panel {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .auth {
+    padding: 12px 8px;
+  }
+  
+  .campos-fila { 
+    grid-template-columns: 1fr; 
+  }
+}
