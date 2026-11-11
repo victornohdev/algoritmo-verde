@@ -1,0 +1,110 @@
+.carrusel {
+  position: relative;
+  overflow: hidden;
+  background: var(--verde-950);
+  color: #fff;
+}
+
+.carrusel__pista {
+  display: flex;
+  transition: transform .7s cubic-bezier(.22, .8, .24, 1);
+}
+
+.carrusel__slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--verde-900);
+}
+.carrusel__slide:nth-child(even) { background: var(--verde-800); }
+
+.carrusel__contenido {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  align-items: center;
+  gap: 48px;
+  padding-block: 56px 72px;
+}
+
+.carrusel__etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+.carrusel__titulo {
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+  font-weight: 700;
+  margin: 18px 0 12px;
+  max-width: 17em;
+}
+.carrusel__texto { color: rgba(255, 255, 255, .82); max-width: 34em; margin-bottom: 26px; }
+.carrusel__acciones { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.carrusel__visual {
+  justify-self: end;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrusel__visual small { font-size: .78rem; opacity: .8; }
+
+/* Controles */
+.carrusel__flecha {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 46px; height: 46px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .25);
+  color: #fff;
+  transition: background var(--transicion), transform var(--transicion);
+}
+.carrusel__flecha:hover { background: rgba(255, 255, 255, .28); }
+.carrusel__flecha--prev { left: 20px; }
+.carrusel__flecha--next { right: 20px; }
+
+.carrusel__puntos {
+  position: absolute;
+  left: 0; right: 0; bottom: 24px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.carrusel__punto {
+  width: 34px; height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .3);
+  transition: background var(--transicion);
+}
+.carrusel__punto:hover { background: rgba(255, 255, 255, .55); }
+.carrusel__punto.activo { background: var(--verde-400); }
+
+.carrusel__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+

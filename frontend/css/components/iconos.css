@@ -1,0 +1,21 @@
+/* Espacios reservados para íconos.
+   Vacío = se ve un recuadro punteado. Para poner el ícono, mete un <img> o <svg> dentro del <span class="icono-slot">. */
+.icono-slot {
+  --s: 20px;
+  flex: none;
+  display: inline-block;
+  width: var(--s);
+  height: var(--s);
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.icono-slot:empty { border: 1.5px dashed currentColor; opacity: .5; }
+.icono-slot > img,
+.icono-slot > svg { display: block; width: 100%; height: 100%; }
+.icono-slot > svg { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+.icono-slot--xs { --s: 14px; border-radius: 4px; }
+.icono-slot--sm { --s: 18px; }
+.icono-slot--md { --s: 22px; }
+.icono-slot--lg { --s: 26px; border-radius: 7px; }
+.icono-slot--xl { --s: 40px; border-radius: 10px; }

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algoritmo Verde</title>
+  <meta name="description" content="Recicla, entrega tu material en puntos de acopio y campañas, y gana Eco-Puntos que puedes canjear por recompensas.">
+  <link rel="icon" href="assets/icons/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/components/carrusel.js" defer></script>
+</head>
+
+<body>
+
+  <a class="saltar-contenido" href="#quienes-somos">Saltar al contenido</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="contenedor navbar__inner">
+      <a class="navbar__marca" href="#inicio" aria-label="Algoritmo Verde, ir al inicio">
+        <img src="assets/icons/logo.png" alt="Algoritmo Verde Logo" class="navbar__logo-img">        
+        <span>Algoritmo<b>Verde</b></span>
+      </a>
+
+      <nav class="navbar__menu" aria-label="Principal">
+        <ul>
+          <li><a class="navbar__enlace" href="#inicio">Inicio</a></li>
+          <li><a class="navbar__enlace" href="#quienes-somos">Nosotros</a></li>
+          <li><a class="navbar__enlace" href="#puntos">Puntos</a></li>
+          <li><a class="navbar__enlace" href="#reconocimientos">Reconocimientos</a></li>
+          <li><a class="navbar__enlace" href="#impacto">Impacto</a></li>
+          <li><a class="navbar__enlace" href="#eventos">Campañas</a></li>
+        </ul>
+        <a class="btn btn--primario btn--sm" href="pages/auth/login.html">Ingresar / Unirse</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ CARRUSEL ============ -->
+    <section id="inicio" aria-label="Novedades">
+      <div class="carrusel">
+        <div class="carrusel__pista">
+
+          <!-- SLIDE 1 -->
+          <article class="carrusel__slide">
+            <div class="contenedor carrusel__contenido">
+              <div>
+                <span class="carrusel__etiqueta"><i class="fa-solid fa-recycle"></i> Eco-Puntos</span>
+                <h2 class="carrusel__titulo">Recicla hoy, gana Eco-Puntos</h2>
+                <p class="carrusel__texto">Cada kilo de PET, aluminio, cartón y más que entregas se valida y se convierte en puntos para tu billetera.</p>
+                <div class="carrusel__acciones">
+                  <a class="btn btn--primario" href="#puntos">Ver cuánto vale tu reciclaje</a>
+                  <a class="btn btn--claro" href="pages/auth/registro.html">Crear mi cuenta</a>
+                </div>
+              </div>
+              <div class="carrusel__visual">
+                <img src="assets/images/landing/Reciclaje.png" alt="Fotografía de contenedores de reciclaje" class="carrusel__img">
+              </div>
+            </div>
+          </article>
+
+          <!-- SLIDE 2 -->
+          <article class="carrusel__slide">
+            <div class="contenedor carrusel__contenido">
+              <div>
+                <span class="carrusel__etiqueta"><i class="fa-solid fa-gift"></i> Recompensas</span>
+                <h2 class="carrusel__titulo">Canjea tus puntos por recompensas</h2>
+                <p class="carrusel__texto">Artículos, constancias y beneficios te esperan en el catálogo de canje. Mientras más reciclas, más alto llegas.</p>
+                <div class="carrusel__acciones">
+                  <a class="btn btn--primario" href="pages/auth/login.html">Conocer recompensas</a>
+                </div>
+              </div>
+              <div class="carrusel__visual">
+                <img src="assets/images/landing/Productos.png" alt="Muestra del catálogo de recompensas" class="carrusel__img">
+              </div>
+            </div>
+          </article>
+
+          <!-- SLIDE 3 -->
+          <article class="carrusel__slide">
+            <div class="contenedor carrusel__contenido">
+              <div>
+                <span class="carrusel__etiqueta"><i class="fa-solid fa-calendar-days"></i> Campañas</span>
+                <h2 class="carrusel__titulo">Campañas de reciclaje para estudiantes</h2>
+                <p class="carrusel__texto">Dentro o fuera del campus: súmate a las campañas, entrega tu material y recibe puntos extra.</p>
+                <div class="carrusel__acciones">
+                  <a class="btn btn--primario" href="#eventos">Ver campañas</a>
+                </div>
+              </div>
+              <div class="carrusel__visual">
+                <img src="assets/images/landing/Campanias.png" alt="Cartel de la campaña de reciclaje" class="carrusel__img">
+              </div>
+            </div>
+          </article>
+
+          <!-- SLIDE 4 -->
+          <article class="carrusel__slide">
+            <div class="contenedor carrusel__contenido">
+              <div>
+                <span class="carrusel__etiqueta"><i class="fa-solid fa-trophy"></i> Ranking</span>
+                <h2 class="carrusel__titulo">Sube en el ranking de recicladores</h2>
+                <p class="carrusel__texto">Cada mes reconocemos a quienes más Eco-Puntos suman. ¿Serás el siguiente?</p>
+                <div class="carrusel__acciones">
+                  <a class="btn btn--primario" href="#reconocimientos">Ver el ranking</a>
+                </div>
+              </div>
+              <div class="carrusel__visual">
+                <img src="assets/images/landing/podio.png" alt="Ilustración del ranking mensual" class="carrusel__img">
+              </div>
+            </div>
+          </article>
+
+          <!-- SLIDE 5 -->
+          <article class="carrusel__slide">
+            <div class="contenedor carrusel__contenido">
+              <div>
+                <span class="carrusel__etiqueta"><i class="fa-solid fa-users"></i> Comunidad</span>
+                <h2 class="carrusel__titulo">Más de 840 estudiantes ya reciclan con nosotros</h2>
+                <p class="carrusel__texto">Estudiantes trabajando juntos por un entorno más sustentable. Tu aportación cuenta.</p>
+                <div class="carrusel__acciones">
+                  <a class="btn btn--primario" href="pages/auth/registro.html">Crear mi cuenta</a>
+                </div>
+              </div>
+              <div class="carrusel__visual">
+                <img src="assets/images/landing/Comunidad-reciclaje.png" alt="Fotografía grupal de la comunidad verde" class="carrusel__img">
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <button class="carrusel__flecha carrusel__flecha--prev" type="button" aria-label="Diapositiva anterior"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carrusel__flecha carrusel__flecha--next" type="button" aria-label="Diapositiva siguiente"><i class="fa-solid fa-chevron-right"></i></button>
+
+        <div class="carrusel__puntos">
+          <button class="carrusel__punto" type="button" aria-label="Ir a la diapositiva 1"></button>
+          <button class="carrusel__punto" type="button" aria-label="Ir a la diapositiva 2"></button>
+          <button class="carrusel__punto" type="button" aria-label="Ir a la diapositiva 3"></button>
+          <button class="carrusel__punto" type="button" aria-label="Ir a la diapositiva 4"></button>
+          <button class="carrusel__punto" type="button" aria-label="Ir a la diapositiva 5"></button>
+        </div>
+      </div>
+    </section>
+
+<!-- ============ QUIÉNES SOMOS ============ -->
+    <section id="quienes-somos" class="seccion">
+      <div class="contenedor quienes">
+        <div class="quienes__texto">
+          <p class="eyebrow">Quiénes somos</p>
+          <h1 class="titulo-seccion">Tecnología al servicio del <span class="resaltado">planeta</span></h1>
+          <p class="lead">
+            <strong>Algoritmo Verde</strong> es una iniciativa tecnológica y comunitaria diseñada para transformar la cultura del reciclaje dentro del campus universitario. Convertimos cada acción sustentable en beneficios tangibles para los estudiantes.
+          </p>
+          <p>
+            Nacidos en el <strong>Tecnológico Nacional de México, Campus Cancún</strong>, impulsamos la economía circular mediante la digitalización de entregas de residuos, el seguimiento de campañas ambientales y el reconocimiento público a quienes lideran el cambio sustentable en nuestra región.
+          </p>
+
+          <ul class="pilares">
+            <li class="pilar">
+              <span class="pilar__icono"><i class="fa-solid fa-eye"></i></span>
+              <div>
+                <strong>Trazabilidad y Visibilidad</strong>
+                <span>Registra y monitorea en tiempo real cada kilo reciclado y los Eco-Puntos acumulados en tu billetera digital.</span>
+              </div>
+            </li>
+            <li class="pilar">
+              <span class="pilar__icono"><i class="fa-solid fa-users"></i></span>
+              <div>
+                <strong>Comunidad Activa</strong>
+                <span>Conecta con estudiantes y docentes en jornadas de reforestación, limpieza y talleres ecológicos dentro y fuera del campus.</span>
+              </div>
+            </li>
+            <li class="pilar">
+              <span class="pilar__icono"><i class="fa-solid fa-trophy"></i></span>
+              <div>
+                <strong>Incentivos y Reconocimiento</strong>
+                <span>Obtén recompensas académicas, reconocimientos institucionales y escala en el ranking mensual de recicladores.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="quienes__cta">
+            <a class="btn btn--primario btn--lg" href="pages/auth/login.html">Iniciar sesión / Registrarse</a>
+            <a class="btn btn--secundario btn--lg" href="#puntos">¿Cómo ganar puntos?</a>
+          </div>
+        </div>
+
+        <div class="quienes__visual">
+          <div class="quienes__tarjeta-img">
+            <img src="assets/images/landing/tecnmcanous.jpg" alt="Instalaciones del TecNM Campus Cancún y jornadas sustentables" class="quienes__img">
+            <div class="quienes__badge-flotante">
+              <i class="fa-solid fa-seedling"></i>
+              <div>
+                <strong>+12 Toneladas</strong>
+                <small>Residuos recuperados</small>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sello">
+            <img src="assets/icons/selloLogo.png" alt="Logo TecNM" class="sello__logo">
+            <span>Campus Cancún<br><small>TecNM</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ECO-PUNTOS POR RECICLAR ============ -->
+    <section id="puntos" class="seccion seccion--alt">
+      <div class="contenedor">
+        <header class="encabezado-seccion">
+          <p class="eyebrow">Eco-Puntos</p>
+          <h2 class="titulo-seccion">Cada kilo que reciclas se convierte en <span class="resaltado">puntos</span></h2>
+          <p class="subtitulo">Entrega tu material en un punto de acopio o en una campaña, valídalo y acumula puntos para canjear.</p>
+        </header>
+
+        <div class="puntos">
+          <ol class="pasos">
+            <li class="paso"><span class="paso__num">1</span><div><strong>Separa y lleva tu material</strong><span>Limpio y seco, a un punto de acopio o a una campaña de reciclaje.</span></div><i class="fa-solid fa-dumpster paso__icono"></i></li>
+            <li class="paso"><span class="paso__num">2</span><div><strong>Registra tu entrega</strong><span>Sube una foto y el peso; un responsable la valida.</span></div><i class="fa-solid fa-map-location-dot paso__icono"></i></li>
+            <li class="paso"><span class="paso__num">3</span><div><strong>Recibe tus Eco-Puntos</strong><span>Los puntos llegan a tu billetera y suman en el ranking.</span></div><i class="fa-solid fa-coins paso__icono"></i></li>
+            <li class="paso"><span class="paso__num">4</span><div><strong>Canjea tus Eco-Puntos</strong><span>Cámbialos por recompensas, beneficios y reconocimientos en el catálogo.</span></div><i class="fa-solid fa-gift paso__icono"></i></li>
+          </ol>
+
+          <aside class="card tabla-puntos" aria-label="Equivalencia de puntos por material">
+            <h3>¿Cuánto vale tu reciclaje?</h3>
+            <ul>
+              <li class="tabla-puntos__fila"><span class="tabla-puntos__icono"><i class="fa-solid fa-bottle-water"></i></span><span class="tabla-puntos__nombre">PET (botellas)</span><span class="tabla-puntos__pts">10<small>pts por kg</small></span></li>
+              <li class="tabla-puntos__fila"><span class="tabla-puntos__icono"><i class="fa-solid fa-box-archive"></i></span><span class="tabla-puntos__nombre">Aluminio (latas)</span><span class="tabla-puntos__pts">25<small>pts por kg</small></span></li>
+              <li class="tabla-puntos__fila"><span class="tabla-puntos__icono"><i class="fa-solid fa-newspaper"></i></span><span class="tabla-puntos__nombre">Cartón y papel</span><span class="tabla-puntos__pts">4<small>pts por kg</small></span></li>
+              <li class="tabla-puntos__fila"><span class="tabla-puntos__icono"><i class="fa-solid fa-wine-bottle"></i></span><span class="tabla-puntos__nombre">Vidrio</span><span class="tabla-puntos__pts">5<small>pts por kg</small></span></li>
+              <li class="tabla-puntos__fila"><span class="tabla-puntos__icono"><i class="fa-solid fa-plug"></i></span><span class="tabla-puntos__nombre">Pilas y electrónicos</span><span class="tabla-puntos__pts">40<small>pts por kg</small></span></li>
+            </ul>
+            <p class="tabla-puntos__nota">Las campañas suman <strong>puntos extra</strong> por kilo entregado.</p>
+            <a class="btn btn--primario" href="pages/auth/registro.html">Empezar a sumar <i class="fa-solid fa-arrow-right"></i></a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RECONOCIMIENTOS ============ -->
+    <section id="reconocimientos" class="seccion">
+      <div class="contenedor">
+        <header class="encabezado-seccion">
+          <p class="eyebrow">Cuadro de honor</p>
+          <h2 class="titulo-seccion">Reconocemos a quienes hacen la diferencia</h2>
+          <p class="subtitulo">Cada mes destacamos al reciclador con más puntos y la idea ecológica con mayor respaldo.</p>
+        </header>
+
+        <div class="reconocimientos">
+          <div class="reconocimientos__col">
+
+            <!-- Usuario del mes -->
+            <article class="card card--destacada">
+              <span class="etiqueta etiqueta--acento"><i class="fa-solid fa-trophy"></i> Reciclador del mes · Octubre 2026</span>
+              <div class="usuario-mes__cabecera">
+                <span class="avatar">VH</span>
+                <div>
+                  <h3 class="usuario-mes__nombre">Valeria Hernández Cruz</h3>
+                  <p class="usuario-mes__carrera">Ing. Ambiental · 5.º semestre</p>
+                </div>
+              </div>
+              <div class="stats-fila">
+                <div class="stat-mini"><strong>1,240</strong><span>Eco-Puntos</span></div>
+                <div class="stat-mini"><strong>38</strong><span>Entregas</span></div>
+                <div class="stat-mini"><strong>86</strong><span>Kg reciclados</span></div>
+              </div>
+              <div class="medallas">
+                <span class="etiqueta">Reciclador oro</span>
+                <span class="etiqueta">Guardián del árbol</span>
+                <span class="etiqueta">Voz verde</span>
+              </div>
+            </article>
+
+            <!-- Idea del mes -->
+            <article class="card">
+              <span class="etiqueta etiqueta--acento"><i class="fa-solid fa-lightbulb"></i> Idea ecológica del mes</span>
+              <h3 class="idea__titulo">Huerto vertical con composta en la cafetería</h3>
+              <p class="idea__texto">Aprovechar los residuos orgánicos de la cafetería para producir composta y alimentar un huerto vertical con hierbas y hortalizas que se usen en el propio comedor.</p>
+              <div class="idea__autor">
+                <span class="avatar">DA</span>
+                <span>Propuesta por <strong>Diego Alonso Pech</strong> · Ing. en Sistemas</span>
+              </div>
+              <div class="idea__pie">
+                <div class="idea__votos">
+                  <span><i class="fa-solid fa-thumbs-up"></i> 214 votos</span>
+                  <span><i class="fa-solid fa-comment"></i> 37 comentarios</span>
+                </div>
+                <a class="btn btn--secundario btn--sm" href="pages/auth/login.html">Ver en el foro <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Ranking -->
+          <aside class="card" aria-label="Ranking del mes">
+            <div class="ranking__cabecera">
+              <span class="etiqueta"><i class="fa-solid fa-users"></i> Ranking del mes</span>
+              <h3>Top recicladores de Octubre 2026</h3>
+            </div>
+            <ol class="ranking__lista">
+              <li class="ranking__fila">
+                <span class="ranking__pos">1</span>
+                <span class="avatar">VH</span>
+                <div>
+                  <span class="ranking__nombre">Valeria Hernández Cruz<span class="ranking__carrera">Ing. Ambiental</span></span>
+                  <div class="ranking__barra"><i style="width:100%"></i></div>
+                </div>
+                <span class="ranking__puntos">1,240<small>Eco-Puntos</small></span>
+              </li>
+              <li class="ranking__fila">
+                <span class="ranking__pos">2</span>
+                <span class="avatar">DA</span>
+                <div>
+                  <span class="ranking__nombre">Diego Alonso Pech<span class="ranking__carrera">Ing. en Sistemas</span></span>
+                  <div class="ranking__barra"><i style="width:89%"></i></div>
+                </div>
+                <span class="ranking__puntos">1,105<small>Eco-Puntos</small></span>
+              </li>
+              <li class="ranking__fila">
+                <span class="ranking__pos">3</span>
+                <span class="avatar">CO</span>
+                <div>
+                  <span class="ranking__nombre">Camila Ortiz May<span class="ranking__carrera">Arquitectura</span></span>
+                  <div class="ranking__barra"><i style="width:79%"></i></div>
+                </div>
+                <span class="ranking__puntos">980<small>Eco-Puntos</small></span>
+              </li>
+              <li class="ranking__fila">
+                <span class="ranking__pos">4</span>
+                <span class="avatar">LF</span>
+                <div>
+                  <span class="ranking__nombre">Luis Fernando Canul<span class="ranking__carrera">Ing. Industrial</span></span>
+                  <div class="ranking__barra"><i style="width:74%"></i></div>
+                </div>
+                <span class="ranking__puntos">915<small>Eco-Puntos</small></span>
+              </li>
+              <li class="ranking__fila">
+                <span class="ranking__pos">5</span>
+                <span class="avatar">XB</span>
+                <div>
+                  <span class="ranking__nombre">Ximena Balam Tun<span class="ranking__carrera">Lic. en Administración</span></span>
+                  <div class="ranking__barra"><i style="width:70%"></i></div>
+                </div>
+                <span class="ranking__puntos">870<small>Eco-Puntos</small></span>
+              </li>
+              <li class="ranking__fila">
+                <span class="ranking__pos">6</span>
+                <span class="avatar">MR</span>
+                <div>
+                  <span class="ranking__nombre">Mateo Rodríguez Dzib<span class="ranking__carrera">Ing. en Mecatrónica</span></span>
+                  <div class="ranking__barra"><i style="width:65%"></i></div>
+                </div>
+                <span class="ranking__puntos">810<small>Eco-Puntos</small></span>
+              </li>
+              <li class="ranking__fila">
+                <span class="ranking__pos">7</span>
+                <span class="avatar">SP</span>
+                <div>
+                  <span class="ranking__nombre">Sofía Pech Uc<span class="ranking__carrera">Lic. en Turismo</span></span>
+                  <div class="ranking__barra"><i style="width:60%"></i></div>
+                </div>
+                <span class="ranking__puntos">745<small>Eco-Puntos</small></span>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTRICAS DE IMPACTO ============ -->
+    <section id="impacto" class="seccion seccion--oscura">
+      <div class="contenedor">
+        <header class="encabezado-seccion encabezado-seccion--claro">
+          <p class="eyebrow eyebrow--claro">Impacto colectivo</p>
+          <h2 class="titulo-seccion">Lo que hemos logrado juntos</h2>
+          <p class="subtitulo">Números acumulados de toda la comunidad, actualizados con cada entrega y cada campaña.</p>
+        </header>
+
+        <div class="metricas">
+          <div class="metrica">
+            <span class="metrica__icono"><i class="fa-solid fa-recycle"></i></span>
+            <span class="metrica__valor">12,480 kg</span>
+            <span class="metrica__etiqueta">de residuos gestionados</span>
+          </div>
+          <div class="metrica">
+            <span class="metrica__icono"><i class="fa-solid fa-tree"></i></span>
+            <span class="metrica__valor">1,326</span>
+            <span class="metrica__etiqueta">árboles plantados</span>
+          </div>
+          <div class="metrica">
+            <span class="metrica__icono"><i class="fa-solid fa-rocket"></i></span>
+            <span class="metrica__valor">24</span>
+            <span class="metrica__etiqueta">proyectos comunitarios concretados</span>
+          </div>
+          <div class="metrica">
+            <span class="metrica__icono"><i class="fa-solid fa-users"></i></span>
+            <span class="metrica__valor">842</span>
+            <span class="metrica__etiqueta">estudiantes participando</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÓDULOS ============ -->
+    <section id="modulos" class="seccion">
+      <div class="contenedor">
+        <header class="encabezado-seccion">
+          <p class="eyebrow">La plataforma</p>
+          <h2 class="titulo-seccion">Cuatro formas de aportar</h2>
+          <p class="subtitulo">Empieza por reciclar: es la forma más rápida de sumar Eco-Puntos.</p>
+        </header>
+
+        <div class="modulos">
+          <a class="card modulo" href="pages/auth/login.html">
+            <span class="modulo__icono"><i class="fa-solid fa-recycle"></i></span>
+            <h3>Residuos y reciclaje</h3>
+            <p>Ubica puntos de acopio, registra tus entregas con foto y gana Eco-Puntos por cada kilo.</p>
+            <span class="modulo__enlace">Acceder <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a class="card modulo" href="pages/auth/login.html">
+            <span class="modulo__icono"><i class="fa-solid fa-tree"></i></span>
+            <h3>Reforestación</h3>
+            <p>Inscríbete en jornadas de plantación y da seguimiento a los árboles adoptados en el mapa.</p>
+            <span class="modulo__enlace">Acceder <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a class="card modulo" href="pages/auth/login.html">
+            <span class="modulo__icono"><i class="fa-solid fa-lightbulb"></i></span>
+            <h3>Foro de ideas</h3>
+            <p>Publica propuestas, comenta y vota. La más respaldada se vuelve la Idea del Mes.</p>
+            <span class="modulo__enlace">Acceder <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a class="card modulo" href="pages/auth/login.html">
+            <span class="modulo__icono"><i class="fa-solid fa-gift"></i></span>
+            <h3>Eco-Puntos</h3>
+            <p>Acumula puntos por cada acción y canjéalos por beneficios y reconocimientos.</p>
+            <span class="modulo__enlace">Acceder <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EVENTOS ============ -->
+    <section id="eventos" class="seccion seccion--alt">
+      <div class="contenedor">
+        <header class="encabezado-seccion">
+          <p class="eyebrow">Campañas</p>
+          <h2 class="titulo-seccion">Campañas y eventos para estudiantes</h2>
+          <p class="subtitulo">Dentro o fuera del campus: reserva la fecha, participa y suma Eco-Puntos.</p>
+        </header>
+
+        <div class="eventos">
+          <article class="card evento">
+            <div class="evento__fecha"><strong>14</strong><span>NOV</span></div>
+            <div class="evento__info">
+              <span class="etiqueta">Reforestación</span>
+              <h3>Jornada de reforestación del campus</h3>
+              <div class="evento__meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 14 de noviembre de 2026</span>
+                <span><i class="fa-solid fa-clock"></i> 8:00 h</span>
+                <span><i class="fa-solid fa-location-dot"></i> Área verde norte</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card evento">
+            <div class="evento__fecha"><strong>21</strong><span>NOV</span></div>
+            <div class="evento__info">
+              <span class="etiqueta">Reciclaje</span>
+              <h3>Reciclatón electrónico</h3>
+              <div class="evento__meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 21 de noviembre de 2026</span>
+                <span><i class="fa-solid fa-clock"></i> 9:00 h</span>
+                <span><i class="fa-solid fa-location-dot"></i> Explanada principal</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card evento">
+            <div class="evento__fecha"><strong>28</strong><span>NOV</span></div>
+            <div class="evento__info">
+              <span class="etiqueta">Taller</span>
+              <h3>Taller de compostaje casero</h3>
+              <div class="evento__meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 28 de noviembre de 2026</span>
+                <span><i class="fa-solid fa-clock"></i> 11:00 h</span>
+                <span><i class="fa-solid fa-location-dot"></i> Laboratorio de Ing. Ambiental</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card evento">
+            <div class="evento__fecha"><strong>05</strong><span>DIC</span></div>
+            <div class="evento__info">
+              <span class="etiqueta">Limpieza</span>
+              <h3>Limpieza comunitaria de playa</h3>
+              <div class="evento__meta">
+                <span><i class="fa-solid fa-calendar-days"></i> 5 de diciembre de 2026</span>
+                <span><i class="fa-solid fa-clock"></i> 7:30 h</span>
+                <span><i class="fa-solid fa-location-dot"></i> Por confirmar</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="seccion seccion--cta">
+      <div class="contenedor cta-final">
+        <div>
+          <h2>¿Listo para sumar tu parte?</h2>
+          <p>Crea tu cuenta en menos de un minuto y empieza a ganar Eco-Puntos con tu primer kilo reciclado.</p>
+        </div>
+        <a class="btn btn--primario btn--lg" href="pages/auth/registro.html">Crear mi cuenta</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="contenedor">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__marca">
+            <img src="assets/icons/logo.png" alt="Algoritmo Verde Logo" class="footer__logo-img">
+            <span>Algoritmo<b>Verde</b></span>
+          </div>
+          <p>Recicla, gana Eco-Puntos y canjéalos por recompensas.</p>
+          <div class="footer__redes">
+            <a href="#" class="footer__red" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer__red" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer__red" title="X (Twitter)" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__titulo">Explorar</h4>
+          <ul class="footer__lista">
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#reconocimientos">Reconocimientos</a></li>
+            <li><a href="#impacto">Impacto</a></li>
+            <li><a href="#puntos">Eco-Puntos</a></li>
+            <li><a href="#eventos">Campañas</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__titulo">Plataforma</h4>
+          <ul class="footer__lista">
+            <li><a href="pages/auth/login.html">Iniciar sesión</a></li>
+            <li><a href="pages/auth/registro.html">Registrarse</a></li>
+            <li><a href="pages/auth/login.html">Mis Eco-Puntos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__titulo">Contacto</h4>
+          <ul class="footer__lista">
+            <li>TecNM · Campus Cancún</li>
+            <li>contacto@ejemplo.com</li>
+            <li>(998) 000 0000</li>
+            <li>Dirección del plantel (por definir)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__base">
+        <span>© 2026 Algoritmo Verde · TecNM Campus Cancún. Proyecto académico.</span>
+        <span><a href="#">Aviso de privacidad</a> · <a href="#">Términos de uso</a></span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

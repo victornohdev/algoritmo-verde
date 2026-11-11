@@ -1,0 +1,44 @@
+:root {
+  /* Verde de marca: #1caf41 */
+  --verde-50:  #effaf2;
+  --verde-100: #d6f3de;
+  --verde-200: #aee5bd;
+  --verde-400: #4fc96d;
+  --verde-500: #1caf41;
+  --verde-600: #17933a;
+  --verde-700: #127330;
+  --verde-800: #0f5a27;
+  --verde-900: #0b3f1c;
+  --verde-950: #072b12;
+
+  /* Acento cálido (medallas, puntos, destacados) */
+  --acento:       #f4a622;
+  --acento-oscuro:#9a6200;
+  --acento-claro: #fff3d6;
+
+  /* Neutros con un toque verde */
+  --texto:        #14231a;
+  --texto-suave:  #55655b;
+  --borde:        #e2eae5;
+  --fondo:        #f5f9f6;
+  --blanco:       #ffffff;
+
+  /* Podio */
+  --oro:    #e8b100;
+  --plata:  #98a4ad;
+  --bronce: #c27a3a;
+
+  /* Forma y sombras */
+  --radio:    12px;
+  --radio-lg: 18px;
+  --sombra-sm: 0 1px 2px rgba(10, 40, 20, .06), 0 1px 3px rgba(10, 40, 20, .05);
+  --sombra-md: 0 8px 24px rgba(10, 40, 20, .08);
+  --sombra-lg: 0 18px 44px rgba(10, 40, 20, .14);
+
+  /* Layout */
+  --contenedor: 1160px;
+  --navbar-h: 68px;
+
+  --fuente: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --transicion: .2s ease;
+}
