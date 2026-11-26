@@ -174,8 +174,8 @@
 .modulo h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .modulo p { color: var(--texto-suave); font-size: .92rem; flex: 1; }
 .modulo__enlace { margin-top: 18px; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: .9rem; color: var(--verde-700); }
-.modulo__enlace svg { transition: transform var(--transicion); }
-.modulo:hover .modulo__enlace svg { transform: translateX(4px); }
+.modulo__enlace i { transition: transform var(--transicion); }
+.modulo:hover .modulo__enlace i { transform: translateX(4px); }
 
 /* ---------- Eventos ---------- */
 .eventos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -213,12 +213,10 @@
 .cta-final h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
 .cta-final p { color: rgba(255, 255, 255, .8); margin-top: 8px; }
 
-/* ---------- Adaptación a pantallas menores ---------- */
-
 /* ---------- Eco-Puntos por reciclar ---------- */
 .puntos { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: center; }
 
-.pasos { display: grid; gap: 16px; counter-reset: paso; }
+.pasos { display: grid; gap: 16px; }
 
 .paso {
   display: flex;

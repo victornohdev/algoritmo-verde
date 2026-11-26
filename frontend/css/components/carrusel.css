@@ -63,8 +63,6 @@
   justify-content: center;
 }
 
-.carrusel__visual small { font-size: .78rem; opacity: .8; }
-
 /* Controles */
 .carrusel__flecha {
   position: absolute;
