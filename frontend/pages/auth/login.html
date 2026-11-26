@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión | Algoritmo Verde</title>
+  <meta name="description" content="Inicia sesión en Algoritmo Verde para consultar tus Eco-Puntos y registrar tus entregas de reciclaje.">
+  <link rel="icon" href="../../assets/icons/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/pages/auth.css">
+  <script src="../../js/pages/login.js" defer></script>
+</head>
+
+<body class="pagina-auth">
+
+  <a class="saltar-contenido" href="#formulario-login">Saltar al formulario</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar">
+    <div class="contenedor navbar__inner">
+      <a class="navbar__marca" href="../../../index.html" aria-label="Algoritmo Verde, ir al inicio">
+        <img src="../../assets/icons/logo.png" alt="Algoritmo Verde Logo" class="navbar__logo-img">
+        <span>Algoritmo<b>Verde</b></span>
+      </a>
+
+      <nav class="navbar__menu" aria-label="Principal">
+        <ul>
+          <li><a class="navbar__enlace" href="../../../index.html#inicio">Inicio</a></li>
+          <li><a class="navbar__enlace" href="../../../index.html#quienes-somos">Nosotros</a></li>
+          <li><a class="navbar__enlace" href="../../../index.html#puntos">Puntos</a></li>
+          <li><a class="navbar__enlace" href="../../../index.html#reconocimientos">Reconocimientos</a></li>
+          <li><a class="navbar__enlace" href="../../../index.html#impacto">Impacto</a></li>
+          <li><a class="navbar__enlace" href="../../../index.html#eventos">Campañas</a></li>
+        </ul>
+        <a class="btn btn--secundario btn--sm" href="registro.html">Crear cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ CONTENEDOR PRINCIPAL ============ -->
+  <main class="auth">
+
+    <div class="auth__contenedor-card">
+
+      <!-- Panel lateral decorativo (Izquierda) -->
+      <section class="auth__lateral" aria-label="Lo que te espera">
+        <div class="auth__lateral-contenido">
+          <span class="etiqueta etiqueta--acento"><i class="fa-solid fa-leaf"></i> Bienvenido</span>
+          <h2>Qué bueno verte de nuevo</h2>
+          <p>Entra para seguir sumando Eco-Puntos con tu reciclaje.</p>
+
+          <img class="auth__ilustracion" src="../../assets/images/landing/podio.png" alt="Ilustración del podio del ranking mensual">
+
+          <ul class="auth__beneficios">
+            <li><i class="fa-solid fa-circle-check"></i> Consulta tu billetera de Eco-Puntos</li>
+            <li><i class="fa-solid fa-circle-check"></i> Registra tus nuevas entregas</li>
+            <li><i class="fa-solid fa-circle-check"></i> Revisa tu lugar en el ranking</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Panel de Formulario (Derecha) -->
+      <section class="auth__panel">
+        <div class="auth__tarjeta auth__tarjeta--angosta">
+          <h1 class="auth__titulo">Iniciar sesión</h1>
+          <p class="auth__subtitulo">Escribe tu correo y contraseña para entrar.</p>
+
+          <form id="formulario-login" class="auth__form" action="../../../backend/login.php" method="post" novalidate>
+
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <div class="campo__control">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" maxlength="120" required aria-describedby="error-correo">
+              </div>
+              <small class="campo__error" id="error-correo" aria-live="polite"></small>
+            </div>
+
+            <div class="campo">
+              <label for="password">Contraseña</label>
+              <div class="campo__control">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <input type="password" id="password" name="password" placeholder="Tu contraseña" autocomplete="current-password" required aria-describedby="error-password">
+              </div>
+              <small class="campo__error" id="error-password" aria-live="polite"></small>
+            </div>
+
+            <button type="submit" class="btn btn--primario btn--lg auth__enviar">Iniciar sesión</button>
+          </form>
+
+          <p class="auth__registro">¿Aún no tienes cuenta? <a class="auth__enlace" href="registro.html">Crea una</a></p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="auth__pie">
+    <span>© 2026 Algoritmo Verde · TecNM Campus Cancún. Proyecto académico.</span>
+    <a href="../../../index.html">Volver al inicio</a>
+  </footer>
+
+</body>
+</html>

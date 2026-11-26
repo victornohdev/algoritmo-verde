@@ -35,7 +35,7 @@
   background: var(--verde-900);
   border-right: 1px solid var(--borde, #e2e8f0);
 }
-z
+
 .auth__lateral-contenido { 
   max-width: 440px; 
   width: 100%;
@@ -89,8 +89,13 @@ z
   background: var(--blanco, #ffffff);
 }
 
-.auth__tarjeta { 
-  width: 100%; 
+.auth__tarjeta {
+  width: 100%;
+}
+
+/* Formularios cortos (login): campos de un ancho cómodo en lugar de ocupar todo el panel */
+.auth__tarjeta--angosta {
+  max-width: 440px;
 }
 
 .auth__titulo { 
